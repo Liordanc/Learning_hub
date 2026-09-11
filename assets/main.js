@@ -1,4 +1,4 @@
-const copyButton = document.querySelector('.copy-button');
+const copyButtons = [...document.querySelectorAll('.copy-button')];
 const tocToggle = document.querySelector('.toc-toggle');
 const toc = document.querySelector('.toc');
 
@@ -8,25 +8,27 @@ const setTocState = (collapsed) => {
   if (tocToggle) {
     tocToggle.title = collapsed ? 'פתיחת תפריט התוכן' : 'צמצום תפריט התוכן';
   }
-  try { localStorage.setItem('excel-toc-collapsed', String(collapsed)); } catch {}
+  try { localStorage.setItem('learning-hub-toc-collapsed', String(collapsed)); } catch {}
 };
 
 let savedTocState = false;
-try { savedTocState = localStorage.getItem('excel-toc-collapsed') === 'true'; } catch {}
+try { savedTocState = localStorage.getItem('learning-hub-toc-collapsed') === 'true'; } catch {}
 setTocState(savedTocState || window.matchMedia('(max-width: 880px)').matches);
 
 tocToggle?.addEventListener('click', () => {
   setTocState(!document.body.classList.contains('toc-collapsed'));
 });
 
-copyButton?.addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(copyButton.dataset.copy);
-    copyButton.textContent = 'הועתק';
-    window.setTimeout(() => { copyButton.textContent = 'העתקה'; }, 1600);
-  } catch {
-    copyButton.textContent = 'לא ניתן להעתיק';
-  }
+copyButtons.forEach((copyButton) => {
+  copyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(copyButton.dataset.copy);
+      copyButton.textContent = 'הועתק';
+      window.setTimeout(() => { copyButton.textContent = 'העתקה'; }, 1600);
+    } catch {
+      copyButton.textContent = 'לא ניתן להעתיק';
+    }
+  });
 });
 
 const links = [...document.querySelectorAll('.toc a')];
