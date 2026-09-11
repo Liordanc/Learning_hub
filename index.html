@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="מדריך מעשי בעברית לשימוש בפונקציה SUM ב־Excel">
+  <title>הפונקציה SUM ב־Excel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">דלגו לתוכן</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="חומרי לימוד ב־Excel">
+        <span class="brand-mark" aria-hidden="true">X</span>
+        <span>לימוד Excel</span>
+      </a>
+      <span class="section-name">פונקציות</span>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <aside class="toc" id="page-toc" aria-label="תוכן העניינים">
+      <div class="toc-heading">
+        <p class="toc-title">בעמוד זה</p>
+        <button class="toc-toggle" type="button" aria-controls="page-toc" aria-expanded="true" title="צמצום תפריט התוכן">
+          <span class="toggle-icon" aria-hidden="true">›</span>
+          <span class="toggle-label">צמצום</span>
+        </button>
+      </div>
+      <nav>
+        <a class="active" href="#overview"><span class="toc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="toc-text">סקירה כללית</span></a>
+        <a href="#syntax"><span class="toc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 4c-3 0-4 2-4.5 5L9 17c-.3 1.7-1.3 3-3 3M7 11h8M16 15l4 4m0-4-4 4"/></svg></span><span class="toc-text">תחביר</span></a>
+        <a href="#examples"><span class="toc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11M15 9v11"/></svg></span><span class="toc-text">דוגמאות</span></a>
+        <a href="#best-practices"><span class="toc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8.5 14.5A7 7 0 1 1 15.5 14.5c-1 .8-1.5 1.6-1.5 2.5h-4c0-.9-.5-1.7-1.5-2.5z"/></svg></span><span class="toc-text">שיטות עבודה מומלצות</span></a>
+        <a href="#problems"><span class="toc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 2.5 20h19zM12 9v5M12 17.5v.5"/></svg></span><span class="toc-text">בעיות נפוצות</span></a>
+        <a href="#faq"><span class="toc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.4 2.4 0 1 1 3.5 2.2c-.9.5-1.3 1.1-1.3 2.3M12 17.5v.2"/></svg></span><span class="toc-text">שאלות נפוצות</span></a>
+      </nav>
+    </aside>
+
+    <main id="main" class="article">
+      <nav class="breadcrumbs" aria-label="פירורי לחם">
+        <a href="./">Excel</a><span aria-hidden="true">/</span><span>פונקציות</span>
+      </nav>
+
+      <h1>הפונקציה SUM ב־Excel</h1>
+
+      <details class="applies-to">
+        <summary>חל על</summary>
+        <p>Excel עבור Microsoft 365,‏ Excel באינטרנט וגרסאות שולחן העבודה העדכניות.</p>
+      </details>
+
+      <section id="overview" data-block="lead" aria-labelledby="overview-title">
+        <h2 id="overview-title">חיבור מספרים באמצעות SUM</h2>
+        <p class="lead">הפונקציה <bdi>SUM</bdi> מחברת מספרים, תאים וטווחים. אפשר לחבר טווח רציף, כמה טווחים נפרדים או שילוב ביניהם.</p>
+
+        <div class="example-strip" data-block="formula-example" aria-label="דוגמה מהירה">
+          <div>
+            <span class="example-label">נוסחה</span>
+            <code dir="ltr">=SUM(A2:A6)</code>
+          </div>
+          <p>מחברת את כל הערכים מהתא <bdi>A2</bdi> ועד התא <bdi>A6</bdi>.</p>
+          <button class="copy-button" type="button" data-copy="=SUM(A2:A6)" aria-label="העתקת הנוסחה">העתקה</button>
+        </div>
+      </section>
+
+      <section id="syntax" data-block="syntax" aria-labelledby="syntax-title">
+        <h2 id="syntax-title">תחביר</h2>
+        <div class="syntax-box"><code dir="ltr">SUM(number1, [number2], ...)</code></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ארגומנט</th><th>חובה</th><th>תיאור</th></tr></thead>
+            <tbody>
+              <tr><td><code dir="ltr">number1</code></td><td>כן</td><td>המספר, התא או הטווח הראשון שרוצים לחבר.</td></tr>
+              <tr><td><code dir="ltr">number2, ...</code></td><td>לא</td><td>מספרים, תאים או טווחים נוספים שרוצים לחבר.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="examples" data-block="examples" aria-labelledby="examples-title">
+        <h2 id="examples-title">דוגמאות</h2>
+        <p>בדוגמה הבאה, המספרים נמצאים בעמודה <bdi>A</bdi>:</p>
+
+        <div class="excel-demo" data-block="excel-sheet" role="img" aria-label="גיליון Excel מימין לשמאל: בתאים A2 עד A6 המספרים 12, 8, 15, 20 ו־5. בתא A7 נוסחת SUM ותוצאה 60">
+          <div class="excel-titlebar"><span class="excel-app">X</span><span>דוגמה לחישוב סכום</span></div>
+          <div class="excel-ribbon"><span>בית</span><span>הוספה</span><span>נוסחאות</span><span>נתונים</span></div>
+          <div class="formula-row">
+            <div class="name-box" dir="ltr">A7</div>
+            <div class="formula-bar"><span>fx</span><code dir="ltr">=SUM(A2:A6)</code></div>
+          </div>
+          <div class="sheet">
+            <div class="corner"></div><div class="col-head">A</div><div class="col-head">B</div><div class="col-head">C</div>
+            <div class="row-head">1</div><div class="cell heading">סכום</div><div class="cell"></div><div class="cell"></div>
+            <div class="row-head">2</div><div class="cell">12</div><div class="cell"></div><div class="cell"></div>
+            <div class="row-head">3</div><div class="cell">8</div><div class="cell"></div><div class="cell"></div>
+            <div class="row-head">4</div><div class="cell">15</div><div class="cell"></div><div class="cell"></div>
+            <div class="row-head">5</div><div class="cell">20</div><div class="cell"></div><div class="cell"></div>
+            <div class="row-head">6</div><div class="cell">5</div><div class="cell"></div><div class="cell"></div>
+            <div class="row-head active-row">7</div><div class="cell selected">60</div><div class="cell"></div><div class="cell"></div>
+          </div>
+        </div>
+
+        <div class="table-wrap info-table" data-block="comparison-table">
+          <table>
+            <thead><tr><th>נוסחה</th><th>מה היא עושה</th><th>תוצאה</th></tr></thead>
+            <tbody>
+              <tr><td><code dir="ltr">=SUM(A2:A6)</code></td><td>מחברת את כל הערכים בטווח.</td><td>60</td></tr>
+              <tr><td><code dir="ltr">=SUM(A2,A5)</code></td><td>מחברת רק את שני התאים שצוינו.</td><td>32</td></tr>
+              <tr><td><code dir="ltr">=SUM(A2:A4,10)</code></td><td>מחברת את הטווח ומוסיפה 10.</td><td>45</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="best-practices" data-block="best-practices" aria-labelledby="best-title">
+        <h2 id="best-title">שיטות עבודה מומלצות</h2>
+        <div class="tip"><span aria-hidden="true">✓</span><div><h3>השתמשו בהפניות לתאים</h3><p>העדיפו <code dir="ltr">=SUM(A2:A6)</code> על פני חיבור מספרים קבועים. כך התוצאה מתעדכנת כשהנתונים משתנים.</p></div></div>
+        <div class="tip"><span aria-hidden="true">✓</span><div><h3>העדיפו טווח רציף</h3><p>נוסחה עם טווח קלה יותר לקריאה ולתחזוקה מרשימה ארוכה של תאים המחוברים בסימן חיבור.</p></div></div>
+        <div class="tip"><span aria-hidden="true">✓</span><div><h3>בדקו את גבולות הטווח</h3><p>ודאו שהטווח כולל את כל שורות הנתונים ואינו כולל בטעות כותרת או שורת סיכום נוספת.</p></div></div>
+      </section>
+
+      <section id="problems" data-block="troubleshooting" aria-labelledby="problems-title">
+        <h2 id="problems-title">בעיות נפוצות</h2>
+        <div class="accordion">
+          <details><summary>התוצאה היא 0 אף שקיימים מספרים</summary><p>ייתכן שהערכים נשמרו כטקסט. המירו אותם למספרים ובדקו שאין לפניהם גרש או רווח נסתר.</p></details>
+          <details><summary>מופיעה השגיאה <bdi>#VALUE!</bdi></summary><p>בדקו אם הנוסחה מבצעת פעולת חיבור ישירה עם ערך טקסט. שימוש בטווח בתוך <bdi>SUM</bdi> מצמצם מקרים כאלה.</p></details>
+          <details><summary>שורות חדשות אינן נכללות בסכום</summary><p>עדכנו את גבולות הטווח, או הפכו את הנתונים לטבלת Excel כדי שהטווח יתרחב אוטומטית.</p></details>
+          <details><summary>נמחקה שורה ומופיעה השגיאה <bdi>#REF!</bdi></summary><p>תקנו את ההפניה שנמחקה. שימוש בטווחים רציפים מפחית את הסיכון להפניות שבורות.</p></details>
+        </div>
+      </section>
+
+      <section id="faq" data-block="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">שאלות נפוצות</h2>
+        <div class="accordion">
+          <details><summary>האם SUM יכולה לחבר כמה טווחים?</summary><p>כן. לדוגמה: <code dir="ltr">=SUM(A2:A6,C2:C6)</code>.</p></details>
+          <details><summary>כיצד מחברים רק תאים גלויים לאחר סינון?</summary><p>במקרה כזה משתמשים בפונקציה <bdi>SUBTOTAL</bdi>, המתאימה לחישובים ברשימה מסוננת.</p></details>
+          <details><summary>האם אפשר לחבר שעות?</summary><p>כן. אם הסכום עולה על 24 שעות, יש להחיל על תא התוצאה תבנית זמן מתאימה המציגה שעות מצטברות.</p></details>
+        </div>
+      </section>
+
+      <footer class="article-footer">
+        <p>התוכן נכתב בעברית לצורכי למידה ומבוסס על עקרונות העבודה של Excel.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
