@@ -8,6 +8,8 @@
   --soft: #f5f5f5;
   --tip: #f0f8f4;
   --white: #fff;
+  --gmail: #c5221f;
+  --windows: #0078d4;
   font-family: "Segoe UI", Arial, sans-serif;
   color: var(--text);
   background: var(--white);
@@ -28,6 +30,8 @@ code { font-family: Consolas, "Courier New", monospace; }
 .header-inner { max-width: 1240px; height: 58px; margin: auto; padding: 0 32px; display: flex; align-items: center; gap: 22px; }
 .brand { display: flex; align-items: center; gap: 10px; color: #262626; font-weight: 600; text-decoration: none; }
 .brand-mark { width: 28px; height: 28px; display: grid; place-items: center; color: white; background: var(--green); font-weight: 700; }
+.brand-mark.gmail { background: var(--gmail); }
+.brand-mark.windows { background: var(--windows); }
 .section-name { padding-inline-start: 22px; border-inline-start: 2px solid #222; font-size: 1.05rem; }
 
 .page-shell { max-width: 1180px; margin: auto; padding: 0 32px 72px; }
@@ -116,6 +120,33 @@ th { background: #f2f2f2; font-weight: 600; }
 .accordion details p { padding: 0 22px 14px; }
 .article-footer { margin-top: 60px; padding-top: 22px; color: var(--muted); border-top: 1px solid var(--line); font-size: .9rem; }
 
+.step-list { display: grid; gap: 16px; margin: 24px 0 34px; counter-reset: steps; }
+.step-card { position: relative; display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
+.step-card::before { counter-increment: steps; content: counter(steps); width: 42px; height: 42px; display: grid; place-items: center; color: #fff; background: var(--blue); border-radius: 50%; font-weight: 700; }
+.step-card h3 { margin-top: 2px; font-size: 1.12rem; }
+.step-card p { margin-bottom: 0; }
+.ui-token { display: inline-flex; align-items: center; gap: 7px; padding: 2px 8px; color: #242424; background: #f2f2f2; border: 1px solid #d1d1d1; border-radius: 7px; font-weight: 600; white-space: nowrap; }
+.ui-token svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.interface-map { margin: 24px 0 34px; padding: 18px; border: 1px solid #d6dce1; border-radius: 18px; background: #f7f9fb; }
+.interface-screen { min-height: 360px; display: grid; grid-template-rows: 1fr 52px; overflow: hidden; border: 1px solid #aab4bd; border-radius: 12px; background: linear-gradient(145deg,#d9efff,#f5fbff 52%,#cfe4f6); box-shadow: 0 10px 26px rgba(0,0,0,.11); }
+.desktop-area { position: relative; padding: 22px; }
+.desktop-icon { width: 62px; display: grid; justify-items: center; gap: 5px; color: #17324a; font-size: .75rem; text-align: center; }
+.desktop-icon-symbol { width: 42px; height: 42px; display: grid; place-items: center; color: #fff; background: #f2b84b; border-radius: 8px; box-shadow: 0 3px 8px rgba(0,0,0,.13); font-size: 1.25rem; }
+.taskbar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 14px; direction: ltr; background: rgba(249,252,255,.92); border-top: 1px solid rgba(120,140,155,.28); backdrop-filter: blur(12px); }
+.taskbar-center { display: flex; gap: 8px; }
+.taskbar-icon { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 8px; color: #18415f; background: rgba(255,255,255,.65); border: 1px solid rgba(0,0,0,.05); font-weight: 700; }
+.taskbar-system { justify-self: end; display: flex; align-items: center; gap: 10px; font-size: .78rem; }
+.callout-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin-top: 16px; }
+.callout-card { padding: 14px 16px; border-radius: 12px; background: #fff; border: 1px solid #dce2e7; }
+.callout-card strong { display: block; margin-bottom: 3px; color: var(--blue-dark); }
+
+.notice { margin: 18px 0; padding: 18px 20px; display: grid; grid-template-columns: 28px 1fr; gap: 12px; border-radius: 14px; background: #fff8e1; border-inline-start: 4px solid #c99700; }
+.notice-icon { font-weight: 800; color: #8a6500; }
+.contrast-card { margin: 18px 0; padding: 20px; border-radius: 16px; background: #f6f8fa; border: 1px solid #d8dee3; }
+.contrast-card h3 { margin-bottom: 8px; }
+.contrast-card p:last-child { margin-bottom: 0; }
+
 :focus-visible { outline: 3px solid #ffb900; outline-offset: 2px; }
 
 @media (max-width: 880px) {
@@ -138,6 +169,10 @@ th { background: #f2f2f2; font-weight: 600; }
   h1 { font-size: 2.1rem; }
   h2 { margin-top: 2.8rem; font-size: 1.5rem; }
   th, td { min-width: 135px; padding: 11px 12px; }
+  .step-card { grid-template-columns: 40px 1fr; padding: 16px; gap: 12px; }
+  .step-card::before { width: 36px; height: 36px; }
+  .callout-grid { grid-template-columns: 1fr; }
+  .interface-screen { min-height: 290px; }
 }
 
 @media print {
