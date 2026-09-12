@@ -1,1 +1,92 @@
-{"id":"excel-sum","title":"הפונקציה SUM ב־Excel","language":"he","direction":"rtl","product":"Microsoft Excel","version":"Microsoft 365, Excel for the web, Excel 2024–2016","topic":"חיבור מספרים, תאים וטווחים באמצעות SUM","audience":"מבוגרים מתחילים","learningGoal":"בסיום הקריאה הלומד יוכל להבין את תחביר SUM ולכתוב נוסחה המחברת טווח רציף או כמה ארגומנטים.","status":"review","sources":[{"publisher":"Microsoft Support","title":"SUM function","url":"https://support.microsoft.com/en-us/office/sum-function-043e1c7d-7726-4e80-8f32-07b23e057f89","checkedAt":"2026-09-12"}],"assets":[],"blocks":[{"type":"lead","heading":"חיבור מספרים באמצעות SUM","content":"הפונקציה SUM מחברת מספרים, תאים וטווחים."},{"type":"formula-example","heading":null,"content":{"formula":"=SUM(A2:A6)","meaning":"חיבור הערכים בתאים A2 עד A6"}},{"type":"syntax","heading":"תחביר","content":"SUM(number1, [number2], ...)"},{"type":"software-example","heading":"דוגמה בגיליון","content":{"range":"A2:A6","values":[12,8,15,20,5],"result":60}},{"type":"information-table","heading":"דוגמאות נוספות","content":["=SUM(A2:A6)","=SUM(A2,A5)","=SUM(A2:A4,10)"]},{"type":"best-practices","heading":"שיטות עבודה מומלצות","content":["שימוש בהפניות לתאים","טווח רציף","בדיקת גבולות הטווח"]},{"type":"troubleshooting","heading":"בעיות נפוצות","content":["ערכים שנשמרו כטקסט","טווח שאינו כולל שורות חדשות","הפניה שנמחקה"]},{"type":"faq","heading":"שאלות נפוצות","content":["כמה טווחים","תאים גלויים לאחר סינון","חיבור שעות"]}]}
+{
+    "id": "excel-sum",
+    "title": "SUM",
+    "language": "he",
+    "direction": "rtl",
+    "product": "Microsoft Excel",
+    "version": "Microsoft 365, Excel for the web, Excel 2024\u20132016",
+    "topic": "\u05d7\u05d9\u05d1\u05d5\u05e8 \u05de\u05e1\u05e4\u05e8\u05d9\u05dd, \u05ea\u05d0\u05d9\u05dd \u05d5\u05d8\u05d5\u05d5\u05d7\u05d9\u05dd \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea SUM",
+    "audience": "\u05de\u05d1\u05d5\u05d2\u05e8\u05d9\u05dd \u05de\u05ea\u05d7\u05d9\u05dc\u05d9\u05dd",
+    "learningGoal": "\u05d1\u05e1\u05d9\u05d5\u05dd \u05d4\u05e7\u05e8\u05d9\u05d0\u05d4 \u05d4\u05dc\u05d5\u05de\u05d3 \u05d9\u05d5\u05db\u05dc \u05dc\u05d4\u05d1\u05d9\u05df \u05d0\u05ea \u05ea\u05d7\u05d1\u05d9\u05e8 SUM \u05d5\u05dc\u05db\u05ea\u05d5\u05d1 \u05e0\u05d5\u05e1\u05d7\u05d4 \u05d4\u05de\u05d7\u05d1\u05e8\u05ea \u05d8\u05d5\u05d5\u05d7 \u05e8\u05e6\u05d9\u05e3 \u05d0\u05d5 \u05db\u05de\u05d4 \u05d0\u05e8\u05d2\u05d5\u05de\u05e0\u05d8\u05d9\u05dd.",
+    "status": "review",
+    "sources": [
+        {
+            "publisher": "Microsoft Support",
+            "title": "SUM function",
+            "url": "https://support.microsoft.com/en-us/office/sum-function-043e1c7d-7726-4e80-8f32-07b23e057f89",
+            "checkedAt": "2026-09-12"
+        }
+    ],
+    "assets": [],
+    "blocks": [
+        {
+            "type": "lead",
+            "heading": "\u05d7\u05d9\u05d1\u05d5\u05e8 \u05de\u05e1\u05e4\u05e8\u05d9\u05dd \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea SUM",
+            "content": "\u05d4\u05e4\u05d5\u05e0\u05e7\u05e6\u05d9\u05d4 SUM \u05de\u05d7\u05d1\u05e8\u05ea \u05de\u05e1\u05e4\u05e8\u05d9\u05dd, \u05ea\u05d0\u05d9\u05dd \u05d5\u05d8\u05d5\u05d5\u05d7\u05d9\u05dd."
+        },
+        {
+            "type": "formula-example",
+            "heading": null,
+            "content": {
+                "formula": "=SUM(A2:A6)",
+                "meaning": "\u05d7\u05d9\u05d1\u05d5\u05e8 \u05d4\u05e2\u05e8\u05db\u05d9\u05dd \u05d1\u05ea\u05d0\u05d9\u05dd A2 \u05e2\u05d3 A6"
+            }
+        },
+        {
+            "type": "syntax",
+            "heading": "\u05ea\u05d7\u05d1\u05d9\u05e8",
+            "content": "SUM(number1, [number2], ...)"
+        },
+        {
+            "type": "software-example",
+            "heading": "\u05d3\u05d5\u05d2\u05de\u05d4 \u05d1\u05d2\u05d9\u05dc\u05d9\u05d5\u05df",
+            "content": {
+                "range": "A2:A6",
+                "values": [
+                    12,
+                    8,
+                    15,
+                    20,
+                    5
+                ],
+                "result": 60
+            }
+        },
+        {
+            "type": "information-table",
+            "heading": "\u05d3\u05d5\u05d2\u05de\u05d0\u05d5\u05ea \u05e0\u05d5\u05e1\u05e4\u05d5\u05ea",
+            "content": [
+                "=SUM(A2:A6)",
+                "=SUM(A2,A5)",
+                "=SUM(A2:A4,10)"
+            ]
+        },
+        {
+            "type": "best-practices",
+            "heading": "\u05e9\u05d9\u05d8\u05d5\u05ea \u05e2\u05d1\u05d5\u05d3\u05d4 \u05de\u05d5\u05de\u05dc\u05e6\u05d5\u05ea",
+            "content": [
+                "\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05d4\u05e4\u05e0\u05d9\u05d5\u05ea \u05dc\u05ea\u05d0\u05d9\u05dd",
+                "\u05d8\u05d5\u05d5\u05d7 \u05e8\u05e6\u05d9\u05e3",
+                "\u05d1\u05d3\u05d9\u05e7\u05ea \u05d2\u05d1\u05d5\u05dc\u05d5\u05ea \u05d4\u05d8\u05d5\u05d5\u05d7"
+            ]
+        },
+        {
+            "type": "troubleshooting",
+            "heading": "\u05d1\u05e2\u05d9\u05d5\u05ea \u05e0\u05e4\u05d5\u05e6\u05d5\u05ea",
+            "content": [
+                "\u05e2\u05e8\u05db\u05d9\u05dd \u05e9\u05e0\u05e9\u05de\u05e8\u05d5 \u05db\u05d8\u05e7\u05e1\u05d8",
+                "\u05d8\u05d5\u05d5\u05d7 \u05e9\u05d0\u05d9\u05e0\u05d5 \u05db\u05d5\u05dc\u05dc \u05e9\u05d5\u05e8\u05d5\u05ea \u05d7\u05d3\u05e9\u05d5\u05ea",
+                "\u05d4\u05e4\u05e0\u05d9\u05d4 \u05e9\u05e0\u05de\u05d7\u05e7\u05d4"
+            ]
+        },
+        {
+            "type": "faq",
+            "heading": "\u05e9\u05d0\u05dc\u05d5\u05ea \u05e0\u05e4\u05d5\u05e6\u05d5\u05ea",
+            "content": [
+                "\u05db\u05de\u05d4 \u05d8\u05d5\u05d5\u05d7\u05d9\u05dd",
+                "\u05ea\u05d0\u05d9\u05dd \u05d2\u05dc\u05d5\u05d9\u05d9\u05dd \u05dc\u05d0\u05d7\u05e8 \u05e1\u05d9\u05e0\u05d5\u05df",
+                "\u05d7\u05d9\u05d1\u05d5\u05e8 \u05e9\u05e2\u05d5\u05ea"
+            ]
+        }
+    ]
+}
