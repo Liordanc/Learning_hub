@@ -111,6 +111,7 @@ th { background: #f2f2f2; font-weight: 600; }
 
 .tip { margin: 14px 0; padding: 18px 20px; display: grid; grid-template-columns: 28px 1fr; gap: 12px; background: var(--tip); border-inline-start: 4px solid var(--green); }
 .tip > span { color: var(--green); font-weight: 700; }
+.tip > span svg, .toggle-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 .tip p { margin: 0; }
 
 .accordion { border-top: 1px solid var(--line); }
