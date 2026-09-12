@@ -22,7 +22,34 @@ tocToggle?.addEventListener('click', () => {
 copyButtons.forEach((copyButton) => {
   copyButton.addEventListener('click', async () => {
     try {
-      await navigator.clipboard.writeText(copyButton.dataset.copy);
+      const value = copyButton.dataset.copy ?? '';
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(value);
+        } catch {
+          const field = document.createElement('textarea');
+          field.value = value;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.append(field);
+          field.select();
+          const copied = document.execCommand('copy');
+          field.remove();
+          if (!copied) throw new Error('copy failed');
+        }
+      } else {
+        const field = document.createElement('textarea');
+        field.value = value;
+        field.setAttribute('readonly', '');
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.append(field);
+        field.select();
+        const copied = document.execCommand('copy');
+        field.remove();
+        if (!copied) throw new Error('copy failed');
+      }
       copyButton.textContent = 'הועתק';
       window.setTimeout(() => { copyButton.textContent = 'העתקה'; }, 1600);
     } catch {
