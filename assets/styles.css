@@ -10,6 +10,7 @@
   --white: #fff;
   --gmail: #c5221f;
   --windows: #0078d4;
+  --ai: #6d5bd0;
   font-family: "Segoe UI", Arial, sans-serif;
   color: var(--text);
   background: var(--white);
@@ -32,6 +33,16 @@ code { font-family: Consolas, "Courier New", monospace; }
 .brand-mark { width: 28px; height: 28px; display: grid; place-items: center; color: white; background: var(--green); font-weight: 700; }
 .brand-mark.gmail { background: var(--gmail); }
 .brand-mark.windows { background: var(--windows); }
+.brand-mark.ai { background: #242424; border-radius: 9px; }
+.notice-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.prompt-template { margin: 22px 0 34px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.prompt-part { padding: 18px; display: grid; gap: 4px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.prompt-part strong { color: var(--ai); font-size: 1.05rem; }.prompt-part span { color: var(--muted); }
+.prompt-part.goal { border-top: 4px solid #6d5bd0; }.prompt-part.context { border-top: 4px solid #0f6cbd; }.prompt-part.rules { border-top: 4px solid #d97706; }.prompt-part.output { border-top: 4px solid #107c41; }
+.before-after { margin: 22px 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.prompt-card { padding: 20px; border-radius: 16px; border: 1px solid var(--line); }.prompt-card span { font-size: .8rem; font-weight: 700; }.prompt-card p { margin-bottom: 0; }
+.prompt-card.weak { background: #fafafa; }.prompt-card.weak span { color: #8a6500; }.prompt-card.strong { background: #f5f3ff; border-color: #c8c0f3; }.prompt-card.strong span { color: #5142a5; }
+.ai-theme .example-strip { border-top-color: var(--ai); }
 .section-name { padding-inline-start: 22px; border-inline-start: 2px solid #222; font-size: 1.05rem; }
 
 .page-shell { max-width: 1180px; margin: auto; padding: 0 32px 72px; }
@@ -236,6 +247,7 @@ th { background: #f2f2f2; font-weight: 600; }
   .step-card::before { width: 36px; height: 36px; }
   .callout-grid { grid-template-columns: 1fr; }
   .interface-screen { min-height: 290px; }
+  .prompt-template, .before-after { grid-template-columns: 1fr; }
 }
 
 @media print {
