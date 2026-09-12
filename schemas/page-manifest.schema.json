@@ -1,1 +1,187 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Learning page manifest","type":"object","additionalProperties":false,"required":["id","title","language","direction","product","topic","audience","learningGoal","status","sources","blocks"],"properties":{"id":{"type":"string","pattern":"^[a-z0-9-]+$"},"title":{"type":"string","minLength":3},"language":{"const":"he"},"direction":{"const":"rtl"},"product":{"type":"string","minLength":1},"version":{"type":["string","null"]},"topic":{"type":"string","minLength":1},"audience":{"type":"string","minLength":1},"learningGoal":{"type":"string","minLength":1},"status":{"enum":["draft","review","verified","approved","blocked"]},"sources":{"type":"array","items":{"type":"object","required":["publisher","title","url","checkedAt"],"properties":{"publisher":{"type":"string"},"title":{"type":"string"},"url":{"type":"string","format":"uri"},"checkedAt":{"type":"string","format":"date"}}}},"assets":{"type":"array","items":{"type":"object","required":["path","role","alt","source","verified"],"properties":{"path":{"type":"string"},"role":{"enum":["wide","medium","square","portrait","small"]},"alt":{"type":"string"},"caption":{"type":"string"},"source":{"type":"string"},"verified":{"type":"boolean"}}}},"blocks":{"type":"array","minItems":1,"items":{"type":"object","required":["type","heading","content"],"properties":{"type":{"enum":["lead","concept","formula-example","syntax","information-table","software-example","interface-map","step-by-step","action-with-icon","distinction","example","note","important","tip","troubleshooting","faq"]},"heading":{"type":["string","null"]},"content":{"type":["string","array","object"]},"assetRef":{"type":["string","null"]}}}}}}
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Learning page manifest",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "id",
+        "title",
+        "language",
+        "direction",
+        "product",
+        "topic",
+        "audience",
+        "learningGoal",
+        "status",
+        "sources",
+        "blocks"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+            "type": "string",
+            "minLength": 3
+        },
+        "language": {
+            "const": "he"
+        },
+        "direction": {
+            "const": "rtl"
+        },
+        "product": {
+            "type": "string",
+            "minLength": 1
+        },
+        "version": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "topic": {
+            "type": "string",
+            "minLength": 1
+        },
+        "audience": {
+            "type": "string",
+            "minLength": 1
+        },
+        "learningGoal": {
+            "type": "string",
+            "minLength": 1
+        },
+        "status": {
+            "enum": [
+                "draft",
+                "review",
+                "verified",
+                "approved",
+                "blocked"
+            ]
+        },
+        "sources": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "publisher",
+                    "title",
+                    "url",
+                    "checkedAt"
+                ],
+                "properties": {
+                    "publisher": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "checkedAt": {
+                        "type": "string",
+                        "format": "date"
+                    }
+                }
+            }
+        },
+        "assets": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "path",
+                    "role",
+                    "alt",
+                    "source",
+                    "verified"
+                ],
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    },
+                    "role": {
+                        "enum": [
+                            "wide",
+                            "medium",
+                            "square",
+                            "portrait",
+                            "small"
+                        ]
+                    },
+                    "alt": {
+                        "type": "string"
+                    },
+                    "caption": {
+                        "type": "string"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "verified": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        },
+        "blocks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": [
+                    "type",
+                    "heading",
+                    "content"
+                ],
+                "properties": {
+                    "type": {
+                        "enum": [
+                            "lead",
+                            "concept",
+                            "formula-example",
+                            "syntax",
+                            "information-table",
+                            "software-example",
+                            "interface-map",
+                            "step-by-step",
+                            "action-with-icon",
+                            "distinction",
+                        "example",
+                        "best-practices",
+                        "note",
+                            "important",
+                            "tip",
+                            "troubleshooting",
+                            "faq"
+                        ]
+                    },
+                    "heading": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "content": {
+                        "type": [
+                            "string",
+                            "array",
+                            "object"
+                        ]
+                    },
+                    "assetRef": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
